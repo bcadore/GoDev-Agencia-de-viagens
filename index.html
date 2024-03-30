@@ -44,6 +44,12 @@
               <li class="nav-item">
                 <a class="nav-link active" href="#inicio">Início</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#planeje-sua-viagem">Planeje sua viagem</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#topDestinos">Destinos mais procurados</a>
+              </li>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -72,9 +78,6 @@
                   </li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contato">Contato</a>
-              </li>
             </ul>
             <form class="d-flex">
               <input
@@ -93,13 +96,14 @@
       </div>
     </header>
     <main>
-      <section>
+      <!--formulário-->
+      <section id="planeje-sua-viagem">
         <div class="container">
           <h2 class="mb-4 sectionTitle">Planeje sua Viagem</h2>
           <form action="/pesquisar" method="post">
             <div class="row">
               <div class="col-md-6">
-                <label for="origem" class="form-label">Origem</label>
+                <label for="origem" class="form-label" required>Origem</label>
                 <input
                   type="text"
                   class="form-control"
@@ -109,7 +113,7 @@
                 />
               </div>
               <div class="col-md-6">
-                <label for="destino" class="form-label">Destino</label>
+                <label for="destino" class="form-label" required>Destino</label>
                 <input
                   type="text"
                   class="form-control"
@@ -121,7 +125,7 @@
             </div>
             <div class="row mt-3">
               <div class="col-md-4">
-                <label for="data_ida" class="form-label">Data de Ida</label>
+                <label for="data_ida" class="form-label" required >Data de Ida</label>
                 <input
                   type="date"
                   class="form-control"
@@ -158,17 +162,18 @@
                 </select>
               </div>
             </div>
-            <div class="row mt-3">
+            <div class="row mt-3 pb-3">
               <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">
-                  Buscar Voos
+                <button type="button" class="btn btn-primary">
+                  Buscar pacotes
                 </button>
               </div>
             </div>
           </form>
         </div>
       </section>
-      <section>
+      <!--carousel-->
+      <section id="destinos-mais-procurados">
         <div
           id="carouselId"
           class="carousel slide container"
@@ -266,6 +271,7 @@
           </button>
         </div>
       </section>
+      <!--cards-->
       <section id="promocoes" class="container" style="margin-bottom: 150px">
         <h2 class="sectionTitle" id="promocoes">Promoções</h2>
         <h4 class="sectionSubTitle" id="destinosNacionais">
@@ -283,7 +289,7 @@
               </div>
               <div class="card-body">
                 <h3 class="card-title">Florianópolis</h3>
-                <h5 class="card-subtitle">Saindo de São Paulo</h5>
+                <h6 class="card-subtitle">Saindo de São Paulo</h6>
                 <div class="card-text">a partir de</div>
                 <p>
                   <span style="font-weight: bold"
@@ -308,7 +314,7 @@
               </div>
               <div class="card-body">
                 <h3 class="card-title">Curitiba</h3>
-                <h5 class="card-subtitle">Saindo de São Paulo</h5>
+                <h6 class="card-subtitle">Saindo de São Paulo</h6>
                 <div class="card-text">a partir de</div>
                 <p>
                   <span style="font-weight: bold"
@@ -333,7 +339,7 @@
               </div>
               <div class="card-body">
                 <h3 class="card-title">Rio de Janeiro</h3>
-                <h5 class="card-subtitle">Saída de São Paulo</h5>
+                <h6 class="card-subtitle">Saindo de São Paulo</h6>
                 <div class="card-text">a partir de</div>
                 <p>
                   <span style="font-weight: bold"
@@ -364,7 +370,7 @@
               </div>
               <div class="card-body">
                 <h3 class="card-title">Santorini</h3>
-                <h5 class="card-subtitle">Saindo de São Paulo</h5>
+                <h6 class="card-subtitle">Saindo de São Paulo</h6>
                 <div class="card-text">a partir de</div>
                 <p>
                   <span style="font-weight: bold"
@@ -389,7 +395,7 @@
               </div>
               <div class="card-body">
                 <h3 class="card-title">Budapeste</h3>
-                <h5 class="card-subtitle">Saindo de São Paulo</h5>
+                <h6 class="card-subtitle">Saindo de São Pauloo</h5>
                 <div class="card-text">a partir de</div>
                 <p>
                   <span style="font-weight: bold"
@@ -414,7 +420,7 @@
               </div>
               <div class="card-body">
                 <h3 class="card-title">Barcelona</h3>
-                <h5 class="card-subtitle">Saída de São Paulo</h5>
+                <h6 class="card-subtitle">Saindo de São Paulo</h5>
                 <div class="card-text">a partir de</div>
                 <p>
                   <span style="font-weight: bold"
@@ -431,29 +437,25 @@
         </div>
       </section>
     </main>
-    <footer class="py-3 my-4">
+    <footer class="py-3">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-body-secondary">Início</a>
+          <a href=" #planeje-sua-viagem" class="footer-link nav-link px-2 text-body-secondary">Planeje sua viagem</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-body-secondary"
+          <a href="#destinos-mais-procurados" class="nav-link px-2 text-body-secondary"
             >Destinos mais procurados</a
           >
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-body-secondary">Promoções</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-2 text-body-secondary">Contato</a>
+          <a href="#promocoes" class="nav-link px-2 text-body-secondary">Promoções</a>
         </li>
       </ul>
-      <div class="text-center">
+      <div class="text-center py-3">
         <a href="#inicio" class="btn btn-light">Voltar ao Início</a>
       </div>
       <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

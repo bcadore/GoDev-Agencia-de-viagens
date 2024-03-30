@@ -1,21 +1,10 @@
 :root {
   --bs-emphasis-color-rgb: 255, 220, 46;
+  --bs-body-color: #042038;
 }
 
 header img {
   max-width: 200px;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255, 220, 46, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
-}
-
-header .navbar {
-  background-color: #042038;
-}
-
-main section {
-  margin: 36px;
 }
 
 header h1 {
@@ -23,13 +12,12 @@ header h1 {
   color: #ffdc2e;
 }
 
-a.nav-link {
-  color: #ffdc2e;
+header .navbar {
+  background-color: #042038;
 }
 
-#form-pesquisa {
-  border-color: #042038;
-  background-color: #ffdc2e;
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255, 220, 46, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
 }
 
 .btn-outline-success {
@@ -42,6 +30,36 @@ a.nav-link {
   --bs-btn-active-border-color: #ffdc2e;
   --bs-btn-disabled-color: #ffdc2e;
   --bs-btn-disabled-border-color: #ffdc2e;
+}
+
+main section {
+  margin: 36px;
+}
+
+.btn-primary {
+  --bs-btn-color: #ffdc2e;
+  --bs-btn-bg: #042038;
+  --bs-btn-border-color: #042038;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #042038;
+  --bs-btn-hover-border-color: #042038;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #042038;
+  --bs-btn-active-border-color: #042038;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #042038;
+  --bs-btn-disabled-border-color: #042038;
+}
+
+#planeje-sua-viagem {
+  background-color: #ffdc2e;
+}
+
+#form-pesquisa {
+  border-color: #042038;
+  background-color: #ffdc2e;
 }
 
 form label {
@@ -64,10 +82,10 @@ button {
 }
 
 .sectionTitle {
-  border-bottom: 1px solid #042038;
   color: #042038;
-  padding-bottom: 6px;
   text-align: center;
+  border-bottom: 1px solid #042038;
+  padding: 6px 6px;
   margin-bottom: 36px;
 }
 
@@ -81,4 +99,8 @@ button {
 
 .carousel-inner img {
   max-height: 50vh;
+}
+
+footer {
+  background-color: #042038;
 }
