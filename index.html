@@ -8,12 +8,22 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <header>
       <div class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
+        <div class="container">
+          <img
+            src="https://th.bing.com/th/id/OIG3.wo9EW0sUkFF6n5AIDNhx?w=1024&h=1024&rs=1&pid=ImgDetMain"
+            alt="..."
+          />
           <h1 id="inicio">DevGo</h1>
           <button
             class="navbar-toggler"
@@ -69,6 +79,7 @@
             <form class="d-flex">
               <input
                 class="form-control me-2"
+                id="form-pesquisa"
                 type="search"
                 placeholder="Pesquisar destino"
                 aria-label="Search"
@@ -89,25 +100,55 @@
             <div class="row">
               <div class="col-md-6">
                 <label for="origem" class="form-label">Origem</label>
-                <input type="text" class="form-control" id="origem" name="origem" placeholder="Digite a cidade de origem">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="origem"
+                  name="origem"
+                  placeholder="Digite a cidade de origem"
+                />
               </div>
               <div class="col-md-6">
                 <label for="destino" class="form-label">Destino</label>
-                <input type="text" class="form-control" id="destino" name="destino" placeholder="Digite a cidade de destino">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="destino"
+                  name="destino"
+                  placeholder="Digite a cidade de destino"
+                />
               </div>
             </div>
             <div class="row mt-3">
               <div class="col-md-4">
                 <label for="data_ida" class="form-label">Data de Ida</label>
-                <input type="date" class="form-control" id="data_ida" name="data_ida">
+                <input
+                  type="date"
+                  class="form-control"
+                  id="data_ida"
+                  name="data_ida"
+                />
               </div>
               <div class="col-md-4">
-                <label for="data_volta" class="form-label">Data de Volta (opcional)</label>
-                <input type="date" class="form-control" id="data_volta" name="data_volta">
+                <label for="data_volta" class="form-label"
+                  >Data de Volta (opcional)</label
+                >
+                <input
+                  type="date"
+                  class="form-control"
+                  id="data_volta"
+                  name="data_volta"
+                />
               </div>
               <div class="col-md-4">
-                <label for="numero_passageiros" class="form-label">Número de viajantes</label>
-                <select class="form-select" id="numero_passageiros" name="numero_passageiros">
+                <label for="numero_passageiros" class="form-label"
+                  >Número de viajantes</label
+                >
+                <select
+                  class="form-select"
+                  id="numero_passageiros"
+                  name="numero_passageiros"
+                >
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -119,20 +160,23 @@
             </div>
             <div class="row mt-3">
               <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">Buscar Voos</button>
+                <button type="submit" class="btn btn-primary">
+                  Buscar Voos
+                </button>
               </div>
             </div>
           </form>
         </div>
-        
       </section>
       <section>
         <div
-        id="carouselId"
-        class="carousel slide container"
-        data-bs-ride="carousel"
+          id="carouselId"
+          class="carousel slide container"
+          data-bs-ride="carousel"
         >
-        <h2 id="topDestinos" class="sectionTitle">Destinos mais procurados</h2>
+          <h2 id="topDestinos" class="sectionTitle">
+            Destinos mais procurados
+          </h2>
           <div class="carousel-indicators">
             <li
               data-bs-target="#carouselId"

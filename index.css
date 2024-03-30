@@ -1,24 +1,60 @@
+:root {
+  --bs-emphasis-color-rgb: 255, 220, 46;
+}
+
+header img {
+  max-width: 200px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255, 220, 46, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
+}
+
+header .navbar {
+  background-color: #042038;
+}
+
 main section {
   margin: 36px;
 }
 
-.navbar {
-    background-color: #FFDC2E;
+header h1 {
+  font-family: "Dancing Script", cursive;
+  color: #ffdc2e;
 }
 
-#inicio,
-.nav-link,
+a.nav-link {
+  color: #ffdc2e;
+}
+
+#form-pesquisa {
+  border-color: #042038;
+  background-color: #ffdc2e;
+}
+
+.btn-outline-success {
+  --bs-btn-color: #ffdc2e;
+  --bs-btn-border-color: #ffdc2e;
+  --bs-btn-hover-color: #042038;
+  --bs-btn-hover-bg: #ffdc2e;
+  --bs-btn-hover-border-color: #ffdc2e;
+  --bs-btn-active-bg: #ffdc2e;
+  --bs-btn-active-border-color: #ffdc2e;
+  --bs-btn-disabled-color: #ffdc2e;
+  --bs-btn-disabled-border-color: #ffdc2e;
+}
+
 form label {
-    color: #2046b4;
+  color: #042038;
 }
 
 .form-control,
 .form-select {
-    border: 2px solid #2046b4;
+  border: 2px solid #042038;
 }
 
 button {
-    background-color: #2046b4;
+  background-color: #042038;
 }
 
 .card-header img {
@@ -28,8 +64,8 @@ button {
 }
 
 .sectionTitle {
-  border-bottom: 1px solid #2046b4;
-  color: #2046b4;
+  border-bottom: 1px solid #042038;
+  color: #042038;
   padding-bottom: 6px;
   text-align: center;
   margin-bottom: 36px;
@@ -46,5 +82,3 @@ button {
 .carousel-inner img {
   max-height: 50vh;
 }
-
-
