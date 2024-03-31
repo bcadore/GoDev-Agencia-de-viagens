@@ -3,8 +3,12 @@
   --bs-body-color: #042038;
 }
 
+header {
+  background-color: #042038;
+}
+
 header img {
-  max-width: 200px;
+  max-width: 180px;
 }
 
 header h1 {
@@ -12,9 +16,6 @@ header h1 {
   color: #ffdc2e;
 }
 
-header .navbar {
-  background-color: #042038;
-}
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(255, 220, 46, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
@@ -103,4 +104,19 @@ button {
 
 footer {
   background-color: #042038;
+}
+
+.text-body-secondary {
+  color: #ffdc2e;
+}
+
+@media (max-width: 767px) {
+  header img {
+    max-width: 100px;
+  }
+
+  .carousel-item img {
+      height: 280px;
+  }
+
 }

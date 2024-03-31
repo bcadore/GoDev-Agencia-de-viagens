@@ -17,84 +17,87 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <header>
-      <div class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-          <img
-            src="https://th.bing.com/th/id/OIG3.wo9EW0sUkFF6n5AIDNhx?w=1024&h=1024&rs=1&pid=ImgDetMain"
-            alt="..."
-          />
-          <h1 id="inicio">DevGo</h1>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#menuContent"
-            aria-controls="menuContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <nav
-            class="collapse navbar-collapse justify-content-end"
-            id="menuContent"
-          >
-            <ul class="nav navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" href="#inicio">Início</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#planeje-sua-viagem">Planeje sua viagem</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#topDestinos">Destinos mais procurados</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#promocoes"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Promoções
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a class="dropdown-item" href="#destinosNacionais"
-                      >Destinos nacionais</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#destinosInternacionais"
-                      >Destinos internacionais</a
-                    >
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Cruzeiros</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input
-                class="form-control me-2"
-                id="form-pesquisa"
-                type="search"
-                placeholder="Pesquisar destino"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Pesquisar
-              </button>
-            </form>
-          </nav>
-        </div>
+    <header class="navbar navbar-expand-lg sticky-top navbar-light">
+      <div class="container">
+        <img
+          src="https://th.bing.com/th/id/OIG3.wo9EW0sUkFF6n5AIDNhx?w=1024&h=1024&rs=1&pid=ImgDetMain"
+          alt="Logo do site"
+        />
+        <h1 id="inicio">DevGo</h1>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuContent"
+          aria-controls="menuContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav
+          class="collapse navbar-collapse justify-content-end"
+          id="menuContent"
+        >
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#inicio">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#planeje-sua-viagem"
+                >Planeje sua viagem</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#topDestinos"
+                >Destinos mais procurados</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#promocoes"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Promoções
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="#destinosNacionais"
+                    >Destinos nacionais</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#destinosInternacionais"
+                    >Destinos internacionais</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Cruzeiros</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              id="form-pesquisa"
+              type="search"
+              placeholder="Pesquisar destino"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Pesquisar
+            </button>
+          </form>
+        </nav>
       </div>
     </header>
+
     <main>
       <!--formulário-->
       <section id="planeje-sua-viagem">
@@ -125,7 +128,9 @@
             </div>
             <div class="row mt-3">
               <div class="col-md-4">
-                <label for="data_ida" class="form-label" required >Data de Ida</label>
+                <label for="data_ida" class="form-label" required
+                  >Data de Ida</label
+                >
                 <input
                   type="date"
                   class="form-control"
@@ -172,105 +177,83 @@
           </form>
         </div>
       </section>
-      <!--carousel-->
-      <section id="destinos-mais-procurados">
-        <div
-          id="carouselId"
-          class="carousel slide container"
-          data-bs-ride="carousel"
-        >
-          <h2 id="topDestinos" class="sectionTitle">
-            Destinos mais procurados
-          </h2>
-          <div class="carousel-indicators">
-            <li
-              data-bs-target="#carouselId"
-              data-bs-slide-to="0"
-              class="active"
-              aria-label="First slide"
-            ></li>
-            <li
-              data-bs-target="#carouselId"
-              data-bs-slide-to="1"
-              aria-label="Second slide"
-            ></li>
-            <li
-              data-bs-target="#carouselId"
-              data-bs-slide-to="2"
-              aria-label="Third slide"
-            ></li>
-            <li
-              data-bs-target="#carouselId"
-              data-bs-slide-to="3"
-              aria-label="Fourth slide"
-            ></li>
-          </div>
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
+
+      <!--Carousel-->
+      <section class="container">
+        <h2 id="topDestinos" class="sectionTitle">Destinos mais procurados</h2>
+        <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
               <img
                 src="https://cdn.pixabay.com/photo/2018/04/25/09/26/eiffel-tower-3349075_1280.jpg"
+                alt="Imagem de Paris na França"
                 class="w-100 d-block img-fluid"
-                alt="First slide"
               />
-              <div class="carousel-caption d-none d-md-block">
-                <h3>Paris</h3>
-                <p>França</p>
-              </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="3000">
               <img
                 src="https://cdn.pixabay.com/photo/2015/03/09/18/34/beach-666122_1280.jpg"
+                alt="Imagem da ilha de Male nas Maldivas"
                 class="w-100 d-block img-fluid"
-                alt="Second slide"
               />
-              <div class="carousel-caption d-none d-md-block">
-                <h3>Male</h3>
-                <p>Maldivas</p>
-              </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="3000">
               <img
                 src="https://cdn.pixabay.com/photo/2019/10/06/08/57/tiber-river-4529605_1280.jpg"
+                alt="Imagem de Roma na Itália"
                 class="w-100 d-block img-fluid"
-                alt="Third slide"
               />
-              <div class="carousel-caption d-none d-md-block">
-                <h3>Roma</h3>
-                <p>Itália</p>
-              </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="3000">
               <img
                 src="https://cdn.pixabay.com/photo/2016/09/19/22/46/lake-1681485_1280.jpg"
+                alt="Imagem de Zermatt na Suiça"
                 class="w-100 d-block img-fluid"
-                alt="Four slide"
               />
-              <div class="carousel-caption d-none d-md-block">
-                <h3>Zermatt</h3>
-                <p>Suiça</p>
-              </div>
             </div>
           </div>
           <button
             class="carousel-control-prev"
             type="button"
-            data-bs-target="#carouselId"
+            data-bs-target="#carousel"
             data-bs-slide="prev"
           >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="carousel-control-prev-icon"></span>
           </button>
           <button
             class="carousel-control-next"
             type="button"
-            data-bs-target="#carouselId"
+            data-bs-target="#carousel"
             data-bs-slide="next"
           >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="carousel-control-next-icon"></span>
           </button>
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              class="active"
+              data-bs-slide-to="0"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="3"
+            ></button>
+          </div>
         </div>
       </section>
+
       <!--cards-->
       <section id="promocoes" class="container" style="margin-bottom: 150px">
         <h2 class="sectionTitle" id="promocoes">Promoções</h2>
@@ -395,7 +378,7 @@
               </div>
               <div class="card-body">
                 <h3 class="card-title">Budapeste</h3>
-                <h6 class="card-subtitle">Saindo de São Pauloo</h5>
+                <h6 class="card-subtitle">Saindo de São Pauloo</h6>
                 <div class="card-text">a partir de</div>
                 <p>
                   <span style="font-weight: bold"
@@ -420,7 +403,7 @@
               </div>
               <div class="card-body">
                 <h3 class="card-title">Barcelona</h3>
-                <h6 class="card-subtitle">Saindo de São Paulo</h5>
+                <h6 class="card-subtitle">Saindo de São Paulo</h6>
                 <div class="card-text">a partir de</div>
                 <p>
                   <span style="font-weight: bold"
@@ -440,19 +423,25 @@
     <footer class="py-3">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <li class="nav-item">
-          <a href=" #planeje-sua-viagem" class="footer-link nav-link px-2 text-body-secondary">Planeje sua viagem</a>
+          <a
+            href=" #planeje-sua-viagem"
+            class="footer-link nav-link px-2 text-body-secondary"
+            >Planeje sua viagem</a
+          >
         </li>
         <li class="nav-item">
-          <a href="#destinos-mais-procurados" class="nav-link px-2 text-body-secondary"
+          <a href="#topDestinos" class="nav-link px-2 text-body-secondary"
             >Destinos mais procurados</a
           >
         </li>
         <li class="nav-item">
-          <a href="#promocoes" class="nav-link px-2 text-body-secondary">Promoções</a>
+          <a href="#promocoes" class="nav-link px-2 text-body-secondary"
+            >Promoções</a
+          >
         </li>
       </ul>
       <div class="text-center py-3">
-        <a href="#inicio" class="btn btn-light">Voltar ao Início</a>
+        <a href="#menuContent" class="btn btn-light">Voltar ao Início</a>
       </div>
       <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
     </footer>
