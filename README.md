@@ -53,8 +53,7 @@
 
 - O projeto é composto por:
   - Uma página web: **index.html**
-  - Um arquivo de estilização: **main.css**
-  - Uma pasta **(Assets)** com as imagens utilizadas na construção da página web.
+  - Um arquivo de estilização: **index.css**
 
 ## 🎲 Funcionalidades
 
@@ -79,10 +78,6 @@ As funcionalidades desenvolvidas no projeto são:
 - [ ] Integração com APIs de Viagens: Integrar APIs de serviços de viagens para fornecer informações em tempo real sobre preços de passagens, disponibilidade de hotéis e atividades locais, oferecendo uma experiência mais dinâmica aos usuários.
 
 - [ ] Compartilhamento Social: Adicionar botões de compartilhamento social, permitindo aos usuários compartilharem promoções e destinos interessantes com seus amigos e seguidores em plataformas de redes sociais.
-
-## 🛠 Tecnologias
-
-Foi utilizado na construção do projeto as seguintes tecnologias:
 
 ## 🛠 Tecnologias
 
