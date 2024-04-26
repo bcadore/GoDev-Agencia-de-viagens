@@ -8,12 +8,14 @@ header {
 }
 
 header img {
-  max-width: 180px;
+  max-width: 100px;
 }
 
 header h1 {
   font-family: "Dancing Script", cursive;
   color: #ffdc2e;
+  margin: 0;
+  font-size: 2.0rem;
 }
 
 
@@ -112,7 +114,11 @@ footer {
 
 @media (max-width: 767px) {
   header img {
-    max-width: 100px;
+    max-width: 70px;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
   }
 
   .carousel-item img {
