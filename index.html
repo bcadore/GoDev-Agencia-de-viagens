@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="./index.css" />
   </head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target="#menuContent">
     <header class="navbar navbar-expand-lg sticky-top navbar-light">
       <div class="container">
         <img
@@ -41,10 +41,7 @@
         >
           <ul class="nav navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="#inicio">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#planeje-sua-viagem"
+              <a class="nav-link active" href="#planeje-sua-viagem"
                 >Planeje sua viagem</a
               >
             </li>
@@ -99,326 +96,328 @@
     </header>
 
     <main>
-      <!--formulário-->
-      <section id="planeje-sua-viagem">
-        <div class="container">
-          <h2 class="mb-4 sectionTitle">Planeje sua Viagem</h2>
-          <form action="/pesquisar" method="post">
-            <div class="row">
-              <div class="col-md-6">
-                <label for="origem" class="form-label" required>Origem</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="origem"
-                  name="origem"
-                  placeholder="Digite a cidade de origem"
-                />
+      <div data-bs-spy="scroll" data-bs-target="#menuContent" data-bs-root-margin="0px 0px -30%" data-bs-smooth-scroll="true" tabindex="0">
+        <!--formulário-->
+        <section id="planeje-sua-viagem">
+          <div class="container">
+            <h2 class="mb-4 sectionTitle">Planeje sua Viagem</h2>
+            <form action="/pesquisar" method="post">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="origem" class="form-label" required>Origem</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="origem"
+                    name="origem"
+                    placeholder="Digite a cidade de origem"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="destino" class="form-label" required>Destino</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="destino"
+                    name="destino"
+                    placeholder="Digite a cidade de destino"
+                  />
+                </div>
               </div>
-              <div class="col-md-6">
-                <label for="destino" class="form-label" required>Destino</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="destino"
-                  name="destino"
-                  placeholder="Digite a cidade de destino"
-                />
+              <div class="row mt-3">
+                <div class="col-md-4">
+                  <label for="data_ida" class="form-label" required
+                    >Data de Ida</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="data_ida"
+                    name="data_ida"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <label for="data_volta" class="form-label"
+                    >Data de Volta (opcional)</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="data_volta"
+                    name="data_volta"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <label for="numero_passageiros" class="form-label"
+                    >Número de viajantes</label
+                  >
+                  <select
+                    class="form-select"
+                    id="numero_passageiros"
+                    name="numero_passageiros"
+                  >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6+">6 ou mais</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="row mt-3">
-              <div class="col-md-4">
-                <label for="data_ida" class="form-label" required
-                  >Data de Ida</label
-                >
-                <input
-                  type="date"
-                  class="form-control"
-                  id="data_ida"
-                  name="data_ida"
-                />
+              <div class="row mt-3 pb-3">
+                <div class="col-md-12">
+                  <button type="button" class="btn btn-primary">
+                    Buscar pacotes
+                  </button>
+                </div>
               </div>
-              <div class="col-md-4">
-                <label for="data_volta" class="form-label"
-                  >Data de Volta (opcional)</label
-                >
-                <input
-                  type="date"
-                  class="form-control"
-                  id="data_volta"
-                  name="data_volta"
-                />
-              </div>
-              <div class="col-md-4">
-                <label for="numero_passageiros" class="form-label"
-                  >Número de viajantes</label
-                >
-                <select
-                  class="form-select"
-                  id="numero_passageiros"
-                  name="numero_passageiros"
-                >
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6+">6 ou mais</option>
-                </select>
-              </div>
-            </div>
-            <div class="row mt-3 pb-3">
-              <div class="col-md-12">
-                <button type="button" class="btn btn-primary">
-                  Buscar pacotes
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
-
-      <!--Carousel-->
-      <section class="container">
-        <h2 id="topDestinos" class="sectionTitle">Destinos mais procurados</h2>
-        <div class="carousel slide" data-bs-ride="carousel" id="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="3000">
-              <img
-                src="https://cdn.pixabay.com/photo/2018/04/25/09/26/eiffel-tower-3349075_1280.jpg"
-                alt="Imagem de Paris na França"
-                class="w-100 d-block img-fluid"
-              />
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img
-                src="https://cdn.pixabay.com/photo/2015/03/09/18/34/beach-666122_1280.jpg"
-                alt="Imagem da ilha de Male nas Maldivas"
-                class="w-100 d-block img-fluid"
-              />
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img
-                src="https://cdn.pixabay.com/photo/2019/10/06/08/57/tiber-river-4529605_1280.jpg"
-                alt="Imagem de Roma na Itália"
-                class="w-100 d-block img-fluid"
-              />
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img
-                src="https://cdn.pixabay.com/photo/2016/09/19/22/46/lake-1681485_1280.jpg"
-                alt="Imagem de Zermatt na Suiça"
-                class="w-100 d-block img-fluid"
-              />
-            </div>
+            </form>
           </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carousel"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carousel"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon"></span>
-          </button>
-          <div class="carousel-indicators">
+        </section>
+  
+        <!--Carousel-->
+        <section class="container">
+          <h2 id="topDestinos" class="sectionTitle">Destinos mais procurados</h2>
+          <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="3000">
+                <img
+                  src="https://cdn.pixabay.com/photo/2018/04/25/09/26/eiffel-tower-3349075_1280.jpg"
+                  alt="Imagem de Paris na França"
+                  class="w-100 d-block img-fluid"
+                />
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img
+                  src="https://cdn.pixabay.com/photo/2015/03/09/18/34/beach-666122_1280.jpg"
+                  alt="Imagem da ilha de Male nas Maldivas"
+                  class="w-100 d-block img-fluid"
+                />
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img
+                  src="https://cdn.pixabay.com/photo/2019/10/06/08/57/tiber-river-4529605_1280.jpg"
+                  alt="Imagem de Roma na Itália"
+                  class="w-100 d-block img-fluid"
+                />
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img
+                  src="https://cdn.pixabay.com/photo/2016/09/19/22/46/lake-1681485_1280.jpg"
+                  alt="Imagem de Zermatt na Suiça"
+                  class="w-100 d-block img-fluid"
+                />
+              </div>
+            </div>
             <button
+              class="carousel-control-prev"
               type="button"
               data-bs-target="#carousel"
-              class="active"
-              data-bs-slide-to="0"
-            ></button>
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
             <button
+              class="carousel-control-next"
               type="button"
               data-bs-target="#carousel"
-              data-bs-slide-to="1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carousel"
-              data-bs-slide-to="2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carousel"
-              data-bs-slide-to="3"
-            ></button>
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carousel"
+                class="active"
+                data-bs-slide-to="0"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carousel"
+                data-bs-slide-to="1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carousel"
+                data-bs-slide-to="2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carousel"
+                data-bs-slide-to="3"
+              ></button>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <!--cards-->
-      <section id="promocoes" class="container" style="margin-bottom: 150px">
-        <h2 class="sectionTitle" id="promocoes">Promoções</h2>
-        <h4 class="sectionSubTitle" id="destinosNacionais">
-          Destinos nacionais
-        </h4>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-12">
-            <article class="card">
-              <div class="card-header p-0">
-                <img
-                  class="card-img-top"
-                  src="https://cdn.pixabay.com/photo/2021/05/28/21/35/brazil-6292082_1280.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="card-body">
-                <h3 class="card-title">Florianópolis</h3>
-                <h6 class="card-subtitle">Saindo de São Paulo</h6>
-                <div class="card-text">a partir de</div>
-                <p>
-                  <span style="font-weight: bold"
-                    >R$ <span style="font-size: 30px">436,00</span></span
-                  >
-                </p>
-                <a href="#" class="btn btn-primary">Leia mais</a>
-              </div>
-              <footer class="card-footer">
-                Em até 4x sem juros | <strong>Taxas inclusas</strong>
-              </footer>
-            </article>
+        </section>
+  
+        <!--cards-->
+        <section id="promocoes" class="container" style="margin-bottom: 150px">
+          <h2 class="sectionTitle" id="promocoes">Promoções</h2>
+          <h4 class="sectionSubTitle" id="destinosNacionais">
+            Destinos nacionais
+          </h4>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+              <article class="card">
+                <div class="card-header p-0">
+                  <img
+                    class="card-img-top"
+                    src="https://cdn.pixabay.com/photo/2021/05/28/21/35/brazil-6292082_1280.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Florianópolis</h3>
+                  <h6 class="card-subtitle">Saindo de São Paulo</h6>
+                  <div class="card-text">a partir de</div>
+                  <p>
+                    <span style="font-weight: bold"
+                      >R$ <span style="font-size: 30px">436,00</span></span
+                    >
+                  </p>
+                  <a href="#" class="btn btn-primary">Leia mais</a>
+                </div>
+                <footer class="card-footer">
+                  Em até 4x sem juros | <strong>Taxas inclusas</strong>
+                </footer>
+              </article>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+              <article class="card">
+                <div class="card-header p-0">
+                  <img
+                    class="card-img-top"
+                    src="https://cdn.pixabay.com/photo/2017/03/23/12/44/botanical-garden-2168222_1280.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Curitiba</h3>
+                  <h6 class="card-subtitle">Saindo de São Paulo</h6>
+                  <div class="card-text">a partir de</div>
+                  <p>
+                    <span style="font-weight: bold"
+                      >R$ <span style="font-size: 30px">537,00</span></span
+                    >
+                  </p>
+                  <a href="#" class="btn btn-primary">Leia mais</a>
+                </div>
+                <footer class="card-footer">
+                  Em até 4x sem juros | <strong>Taxas inclusas</strong>
+                </footer>
+              </article>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+              <article class="card">
+                <div class="card-header p-0">
+                  <img
+                    class="card-img-top"
+                    src="https://cdn.pixabay.com/photo/2020/01/31/21/25/brazil-4809011_1280.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Rio de Janeiro</h3>
+                  <h6 class="card-subtitle">Saindo de São Paulo</h6>
+                  <div class="card-text">a partir de</div>
+                  <p>
+                    <span style="font-weight: bold"
+                      >R$ <span style="font-size: 30px">716,00</span></span
+                    >
+                  </p>
+                  <a href="#" class="btn btn-primary">Leia mais</a>
+                </div>
+                <footer class="card-footer">
+                  Em até 6x sem juros | <strong>Taxas inclusas</strong>
+                </footer>
+              </article>
+            </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-12">
-            <article class="card">
-              <div class="card-header p-0">
-                <img
-                  class="card-img-top"
-                  src="https://cdn.pixabay.com/photo/2017/03/23/12/44/botanical-garden-2168222_1280.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="card-body">
-                <h3 class="card-title">Curitiba</h3>
-                <h6 class="card-subtitle">Saindo de São Paulo</h6>
-                <div class="card-text">a partir de</div>
-                <p>
-                  <span style="font-weight: bold"
-                    >R$ <span style="font-size: 30px">537,00</span></span
-                  >
-                </p>
-                <a href="#" class="btn btn-primary">Leia mais</a>
-              </div>
-              <footer class="card-footer">
-                Em até 4x sem juros | <strong>Taxas inclusas</strong>
-              </footer>
-            </article>
+  
+          <h4 class="sectionSubTitle" id="destinosInternacionais">
+            Destinos internacionais
+          </h4>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+              <article class="card">
+                <div class="card-header p-0">
+                  <img
+                    class="card-img-top"
+                    src="https://cdn.pixabay.com/photo/2020/10/14/19/49/santorini-5655299_1280.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Santorini</h3>
+                  <h6 class="card-subtitle">Saindo de São Paulo</h6>
+                  <div class="card-text">a partir de</div>
+                  <p>
+                    <span style="font-weight: bold"
+                      >R$ <span style="font-size: 30px">9.500,00</span></span
+                    >
+                  </p>
+                  <a href="#" class="btn btn-primary">Leia mais</a>
+                </div>
+                <footer class="card-footer">
+                  Em até 10x sem juros | <strong>Taxas inclusas</strong>
+                </footer>
+              </article>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+              <article class="card">
+                <div class="card-header p-0">
+                  <img
+                    class="card-img-top"
+                    src="https://cdn.pixabay.com/photo/2013/02/03/15/15/building-77610_1280.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Budapeste</h3>
+                  <h6 class="card-subtitle">Saindo de São Pauloo</h6>
+                  <div class="card-text">a partir de</div>
+                  <p>
+                    <span style="font-weight: bold"
+                      >R$ <span style="font-size: 30px">8.650,00</span></span
+                    >
+                  </p>
+                  <a href="#" class="btn btn-primary">Leia mais</a>
+                </div>
+                <footer class="card-footer">
+                  Em até 10x sem juros | <strong>Taxas inclusas</strong>
+                </footer>
+              </article>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+              <article class="card">
+                <div class="card-header p-0">
+                  <img
+                    class="card-img-top"
+                    src="https://cdn.pixabay.com/photo/2014/11/30/20/46/sagrada-familia-552084_1280.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Barcelona</h3>
+                  <h6 class="card-subtitle">Saindo de São Paulo</h6>
+                  <div class="card-text">a partir de</div>
+                  <p>
+                    <span style="font-weight: bold"
+                      >R$ <span style="font-size: 30px">7.500,00</span></span
+                    >
+                  </p>
+                  <a href="#" class="btn btn-primary">Leia mais</a>
+                </div>
+                <footer class="card-footer">
+                  Em até 10x sem juros | <strong>Taxas inclusas</strong>
+                </footer>
+              </article>
+            </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-12">
-            <article class="card">
-              <div class="card-header p-0">
-                <img
-                  class="card-img-top"
-                  src="https://cdn.pixabay.com/photo/2020/01/31/21/25/brazil-4809011_1280.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="card-body">
-                <h3 class="card-title">Rio de Janeiro</h3>
-                <h6 class="card-subtitle">Saindo de São Paulo</h6>
-                <div class="card-text">a partir de</div>
-                <p>
-                  <span style="font-weight: bold"
-                    >R$ <span style="font-size: 30px">716,00</span></span
-                  >
-                </p>
-                <a href="#" class="btn btn-primary">Leia mais</a>
-              </div>
-              <footer class="card-footer">
-                Em até 6x sem juros | <strong>Taxas inclusas</strong>
-              </footer>
-            </article>
-          </div>
-        </div>
-
-        <h4 class="sectionSubTitle" id="destinosInternacionais">
-          Destinos internacionais
-        </h4>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-12">
-            <article class="card">
-              <div class="card-header p-0">
-                <img
-                  class="card-img-top"
-                  src="https://cdn.pixabay.com/photo/2020/10/14/19/49/santorini-5655299_1280.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="card-body">
-                <h3 class="card-title">Santorini</h3>
-                <h6 class="card-subtitle">Saindo de São Paulo</h6>
-                <div class="card-text">a partir de</div>
-                <p>
-                  <span style="font-weight: bold"
-                    >R$ <span style="font-size: 30px">9.500,00</span></span
-                  >
-                </p>
-                <a href="#" class="btn btn-primary">Leia mais</a>
-              </div>
-              <footer class="card-footer">
-                Em até 10x sem juros | <strong>Taxas inclusas</strong>
-              </footer>
-            </article>
-          </div>
-          <div class="col-lg-4 col-md-6 col-12">
-            <article class="card">
-              <div class="card-header p-0">
-                <img
-                  class="card-img-top"
-                  src="https://cdn.pixabay.com/photo/2013/02/03/15/15/building-77610_1280.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="card-body">
-                <h3 class="card-title">Budapeste</h3>
-                <h6 class="card-subtitle">Saindo de São Pauloo</h6>
-                <div class="card-text">a partir de</div>
-                <p>
-                  <span style="font-weight: bold"
-                    >R$ <span style="font-size: 30px">8.650,00</span></span
-                  >
-                </p>
-                <a href="#" class="btn btn-primary">Leia mais</a>
-              </div>
-              <footer class="card-footer">
-                Em até 10x sem juros | <strong>Taxas inclusas</strong>
-              </footer>
-            </article>
-          </div>
-          <div class="col-lg-4 col-md-6 col-12">
-            <article class="card">
-              <div class="card-header p-0">
-                <img
-                  class="card-img-top"
-                  src="https://cdn.pixabay.com/photo/2014/11/30/20/46/sagrada-familia-552084_1280.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="card-body">
-                <h3 class="card-title">Barcelona</h3>
-                <h6 class="card-subtitle">Saindo de São Paulo</h6>
-                <div class="card-text">a partir de</div>
-                <p>
-                  <span style="font-weight: bold"
-                    >R$ <span style="font-size: 30px">7.500,00</span></span
-                  >
-                </p>
-                <a href="#" class="btn btn-primary">Leia mais</a>
-              </div>
-              <footer class="card-footer">
-                Em até 10x sem juros | <strong>Taxas inclusas</strong>
-              </footer>
-            </article>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
     <footer class="py-3">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
