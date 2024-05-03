@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-    <p>Página web de uma empresa "fictícia" de uma agência de viagens.</p>
+    <p>Página web "fictícia" de uma agência de viagens.</p>
 </h3>
 
 <p align="center">
@@ -27,7 +27,7 @@
 
 ## 💻 Sobre o projeto
 
-- Este projeto é maisum desafio do curso **Engenheiro Front-End** da escola **EBAC** ao qual estou fazendo parte.
+- Este projeto é mais um desafio do curso **Engenheiro Front-End** da escola **EBAC** ao qual estou fazendo parte.
 
 -O projeto trata-se de uma **página web** para uma empresa de viagens.
 
@@ -44,8 +44,6 @@
 - O layout responsivo da página garante uma experiência consistente em dispositivos móveis e desktops.
 
 - O projeto utiliza tecnologias como HTML, CSS (Bootstrap) e JavaScript para criar uma interface dinâmica e atraente para os usuários.
-
-- O objetivo do projeto é fornecer uma plataforma intuitiva para os usuários explorarem opções de viagem e inspirar novas aventuras.
 
 -Foi utilizado o Git/GitHub como a ferramenta de versionamento e também foi utilizado a plataforma da Vercel para hospedar a página web.
 
